@@ -1,3 +1,10 @@
+
+// Shared
+.green-gradient {
+  background: $linear-gradient-from; /* For browsers that do not support gradients */
+  background: linear-gradient($linear-gradient-from, $linear-gradient-to); /* Standard syntax */
+}
+
 /**
  * Site header
  */
@@ -267,7 +274,7 @@
  * Page content
  */
 .page-content {
-  padding: 0 0 $spacing-unit;
+  padding: 0;
 }
 
 .page-heading {
@@ -307,8 +314,6 @@
 }
 
 .post-title-outer {
-  background: $linear-gradient-from; /* For browsers that do not support gradients */
-  background: linear-gradient($linear-gradient-from, $linear-gradient-to); /* Standard syntax */
   padding:2.5em 0 1.5em;
 }
 
