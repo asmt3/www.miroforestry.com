@@ -1,7 +1,7 @@
 
 .parallax { 
     /* The image used */
-    background-image: url("/assets/images/large-parallax-bg.jpeg");
+    background-image: url("../assets/images/large-parallax-bg.jpeg");
 
     /* Set a specific height */
     height: 500px; 
@@ -103,13 +103,13 @@
         }
 
         i.timber {
-            background-image:url("/assets/images/home/timber.png")
+            background-image:url("../assets/images/home/timber.png")
         }
         i.poles {
-            background-image:url("/assets/images/home/poles.png")
+            background-image:url("../assets/images/home/poles.png")
         }
         i.energy {
-            background-image:url("/assets/images/home/energy.png")
+            background-image:url("../assets/images/home/energy.png")
         }
 
         i.overlap {

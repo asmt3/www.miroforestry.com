@@ -26,7 +26,7 @@
   float: left;
   
   // Image replacement
-  background-image:url("/assets/images/logo.png");
+  background-image:url("../assets/images/logo.png");
   width: 245px; 
   height: 96px;
   text-indent: -5000px;
@@ -102,7 +102,7 @@
     left: 0;
     top: 100%;
     width:300px;
-    background:url("/assets/images/header/arrow.png") no-repeat 20px 0px;
+    background:url("../assets/images/header/arrow.png") no-repeat 20px 0px;
     padding-top:5px;
     
   }
