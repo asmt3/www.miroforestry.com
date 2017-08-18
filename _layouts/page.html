@@ -5,9 +5,11 @@ layout: default
 
   <header class="post-header">
     
+    {% if page.header_image %}
     <div class="image-wrapper">
       <img src="{{ page.header_image }}" alt="{{ page.title | escape }}">
     </div>
+    {% endif %}
 
     <div class="post-title-outer green-gradient">
       <div class="wrapper">

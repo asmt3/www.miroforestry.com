@@ -24,16 +24,16 @@
           <h6>Quick Links</h6>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#">Home</a>
+              <a href="/company/overview">Company</a>
             </li>
             <li>
-              <a href="#">Home</a>
+              <a href="/products/overview">Products/Sales</a>
             </li>
             <li>
-              <a href="#">Home</a>
+              <a href="/plantations/overview">Plantations</a>
             </li>
           </ul>
         </div>
@@ -46,8 +46,9 @@
           <h6>Join our mailing list</h6>
           <p>Sign up to news and updates</p>
           <form action="/">
-            <input type="text">
-            <input type="submit" value="Join">
+            <input type="email" placeholder="Your email address" class="email">
+            <input type="submit" value="Join" class="submit">
+            <div style="clear:both;"></div>
           </form>
         </div>
       </div>
@@ -56,10 +57,10 @@
       <div class="footer-col footer-col-3 certification">
         <ul>
           <li>
-            <img src="http://lorempixel.com/60/100" alt="FSC">
+            <img src="/assets/images/footer/fsc-1.png" alt="FSC 136035">
           </li>
           <li>
-            <img src="http://lorempixel.com/60/100" alt="FSC">
+            <img src="/assets/images/footer/fsc-2.png" alt="FSC 135138">
           </li>
         </ul>
       </div>
@@ -75,7 +76,7 @@
 
 <div class="legal">
   <div class="wrapper">
-    Copyright {{ 'now' | date: "%Y" }} by Miro Forestry
+    Copyright {{ 'now' | date: "%Y" }} Miro Forestry
     |
     <a href="#">Terms of Use</a>
     |

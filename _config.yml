@@ -16,13 +16,13 @@
 title: Miro Forestry
 email: your-email@example.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description2 for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Miro Forestry is a sustainable forestry and timber products
+  business with plantations in Ghana and Sierra Leone, West Africa.
 baseurl: "/www.miroforestry.com" # the subpath of your site, e.g. /blog
 url: "https://asmt3.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: alanthomson
 github_username:  asmt3
+google_analytics: "UA-3468514-24"
 
 # Build settings
 markdown: kramdown

@@ -10,7 +10,8 @@
  */
 
 .site-header {
-  min-height: $spacing-unit * 1.865;
+  min-height: 96px;
+  padding: 10px 0;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -23,7 +24,13 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-  // background-image:url("/assets/images/logo.png");
+  
+  // Image replacement
+  background-image:url("/assets/images/logo.png");
+  width: 245px; 
+  height: 96px;
+  text-indent: -5000px;
+  overflow: hidden;
 
   &,
   &:visited {
@@ -35,7 +42,8 @@
 .site-nav {
 
   float:right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  margin-top:66px;
+  font-size:20px;
 
   .nav-trigger {
       display: none;
@@ -50,24 +58,37 @@
     margin: 0;
   }
 
+  a {
+    font-size:20px;
+    color: #78A741;
+  }
+  a:hover {
+    color: #0E8DB1;
+    text-decoration: none;
+  }
   ul ul li a {
+    display: block;
+    font-size:16px;
     color:#fff;
-    padding:4px 8px;
+    padding:8px 16px;
 
     &:visited {
       color:#fff;
     }
-  }
 
-  
-  
+    &:hover {
+      color:#90BED3;
+    }
+
+    
+  }
 
   li {
     display: inline;
     position: relative;
   }
 
-  .trigger>ul>li:not(:last-child)>a:after {
+  .trigger>ul>li:not(:last-child):after {
     content: " / ";
   }
 
@@ -81,7 +102,18 @@
     left: 0;
     top: 100%;
     width:300px;
+    background:url("/assets/images/header/arrow.png") no-repeat 20px 0px;
+    padding-top:5px;
+    
+  }
+  ul ul li {
     background:#0E8DB1;
+  }
+  ul ul li:first-child {
+    padding-top:12px;
+  }
+  ul ul li:last-child {
+    padding-bottom:12px;
   }
 
   li:hover ul {
@@ -157,17 +189,22 @@
  */
 .site-footer {
   border-top: 1px solid #519CBC;
-  padding: $spacing-unit 0;
+  padding: 40px 0;
   background:#0E8DB1;
   color:#fff;
 
   * {
     color:#fff;
   }
-  a:hover {
-    color:#fff;
+  a, a:hover, a:visited {
+    color:#8FBAD1;
+  }
+  h6 {
+    font-size:28px;
+    margin-bottom:0;
   }
 }
+
 
 .footer-heading {
   @include relative-font-size(1.125);
@@ -177,6 +214,9 @@
 
 .footer-contacts {
   text-align: center;
+  border-bottom:1px solid #fff;
+  margin-bottom:25px;
+  padding-bottom:30px;
 }
 
 .footer-col-wrapper {
@@ -208,8 +248,10 @@
 }
 
 .quick-links {
+  line-height: 1.1;
   .inner {
     border-right:1px solid #fff;
+    margin-right:45px;
   }
   
   ul {
@@ -225,6 +267,37 @@
 
   .inner {
     border-right:1px solid #fff;
+    margin-right:45px;
+  }
+
+  p {
+    color:#8FBAD1;
+    font-size:0.8em;
+    margin:0;
+  }
+
+  form {
+    background:#fff;
+    border-radius: 1px;
+    border:1px solid #eee;
+    margin-right:65px;
+  }
+  input {
+    font-size:22px;
+    border:0;
+    color:#000; 
+    outline: none; 
+  }
+  input.email {
+    float:left;
+    width:70%;
+  }
+
+  input.submit {
+    float:right;
+    width:25%;
+    background:#fff;
+    cursor: pointer;
   }
 }
 
@@ -353,6 +426,20 @@
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
+    }
+  }
+}
+
+
+.legal {
+  margin:1em;
+  font-size:0.6em;
+  text-align: center;
+  color: #0E8DB1;
+  a {
+    color: #0E8DB1;
+    &:visited {
+      color: #0E8DB1;
     }
   }
 }
