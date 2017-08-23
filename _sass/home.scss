@@ -15,9 +15,10 @@
 
 .home {
     h1 {
-        @include relative-font-size(1.5);
         padding:1em 0;
         color:#fff;
+        font-weight: 300;
+        font-size:38px;
         text-align:center;
         
     }
@@ -125,9 +126,14 @@
 
         p {
             border:3px solid #fff;
-            color: #158DB2;
             padding:14px 8px;
             margin:-3px 1em 1em;
+        }
+        p a {
+            color: #158DB2;
+            &:visited {
+                color: #158DB2;
+            }
         }
     }
 

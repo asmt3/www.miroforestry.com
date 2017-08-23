@@ -14,5 +14,7 @@
   {% if jekyll.environment == 'production' and site.google_analytics %}
     {% include google-analytics.html %}
     <base href="https://asmt3.github.io/www.miroforestry.com/">
+  {% else %}
+    <base href="/www.miroforestry.com/">
   {% endif %}
 </head>

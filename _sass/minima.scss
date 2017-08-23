@@ -28,15 +28,15 @@ $on-laptop:        800px !default;
 $linear-gradient-from: #78A536;
 $linear-gradient-to: #398A41;
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
+// only used for the nav, otherwise, mobile by default
+@mixin media-query-on-palm() {
+  @media screen and (max-width: $on-palm) {
+    @content;
+  }
+}
+
+@mixin media-query-on-laptop() {
+  @media screen and (min-width: $on-laptop) {
     @content;
   }
 }
