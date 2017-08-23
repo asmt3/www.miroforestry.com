@@ -15,12 +15,19 @@
 
 .home {
     h1 {
-        padding:1em 0;
+        padding:1em;
         color:#fff;
         font-weight: 300;
-        font-size:38px;
+        font-size:18px;
         text-align:center;
-        
+        line-height: 1.2;
+        margin:0;
+    }
+
+    @include media-query-on-laptop() {
+        h1 {
+            font-size:32px;
+        }
     }
 
     // Company Stats
@@ -29,62 +36,100 @@
         color: #158DB2;
         text-align: center;
         padding:54px 0;
+
         .col {
-            float:left;
-        }
-        .col-current-stock {
-            width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-            width:         calc(50% - (#{$spacing-unit} / 2));
+            margin-top:20px;
         }
         .col-arrow {
-            width: -webkit-calc(10% - (#{$spacing-unit} / 2));
-            width:         calc(10% - (#{$spacing-unit} / 2));
-            background: no-repeat bottom center url("../assets/images/home/right-arrow.png");
-            height: 275px;
-        }
-        .col-growth {
-            width: -webkit-calc(40% - (#{$spacing-unit} / 2));
-            width:         calc(40% - (#{$spacing-unit} / 2));
+            background: no-repeat bottom center url("../assets/images/home/down-arrow.png");
+            height: 30px;
         }
 
+
         img {
-            margin-bottom: -1em;
+            margin-bottom: -8px;
         }
 
         p {
             border:3px solid #fff;
-            margin:0 1em;
-            padding: 2em;
+            color: #158DB2;
+            padding: 0.5em;
         }
+
+        @include media-query-on-laptop() {
+
+            .cols {
+                // max-width: 1200px;
+                // margin:0 auto;
+            }
+            .col {
+                float:left;
+            }
+            .col-current-stock {
+                width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+                width:         calc(35% - (#{$spacing-unit} / 2));
+            }
+            .col-arrow {
+                width: -webkit-calc(5% - (#{$spacing-unit} / 2));
+                width:         calc(5% - (#{$spacing-unit} / 2));
+                background: no-repeat bottom center url("../assets/images/home/right-arrow.png");
+                height: 205px;
+            }
+            .col-growth {
+                width: -webkit-calc(27.5% - (#{$spacing-unit} / 2));
+                width:         calc(27.5% - (#{$spacing-unit} / 2));
+            }
+
+            .col-product {
+                width: -webkit-calc(33.5% - (#{$spacing-unit} / 2));
+                width:         calc(33.5% - (#{$spacing-unit} / 2));
+            }
+        
+            p {
+                margin:0 1em;
+                padding: 0.5em;
+            }
+        }
+
     }
 
     // FSC Statement
     .fsc-statement {
 
         p {
-            width:60%;
+            width:50%;
             color:#fff;
-            padding-top: 174px;
+            padding-top: 100px;
+            font-size:16px;
             text-align: center;
+        }
+
+        @include media-query-on-laptop() {
+            p {
+                width:60%;
+                font-size:22px;
+                padding-top: 174px;
+            }
         }
     }
 
     // Products Summary
     .products-summary {
         text-align: center;
-        
+        background: #E6EBED;
+
         h2 {
             color:#fff;
-            padding-top:1em;
+            padding:1em 0 40px;
         }
         ul {
+            position: relative;
+            z-index:10;
+            margin-top:-40px;
             list-style: none;
         }
         ul li {
-            float:left;
-            width: -webkit-calc(33% - (#{$spacing-unit} / 2));
-            width:         calc(33% - (#{$spacing-unit} / 2));
-            margin: 0 0 -210px;
+            margin: 0;
             position: relative;
         }
         .circle {
@@ -117,31 +162,67 @@
             margin: 0 auto;
             display:block;
             height:3px;
-            width:177px;
+            width:167px;
             // background:red;
             background: #E6EBED;
             position: relative;
             z-index:10;
         }
 
-        p {
+        .product {
             border:3px solid #fff;
             padding:14px 8px;
-            margin:-3px 1em 1em;
+            margin:-3px 4px 1em;
+            min-height: 145px;
         }
-        p a {
+
+        .product h3 {
+            font-size: 20px;
+        }
+        .product a {
+            text-transform: uppercase;
             color: #158DB2;
             &:visited {
                 color: #158DB2;
+            }
+        }
+
+        .product p {
+            color:#6B7E8B;
+            font-size:18px;
+        }
+
+        @include media-query-on-laptop() {
+
+            h2 {
+                color:#fff;
+                padding:1em 0 90px;
+            }
+            
+            ul {
+                margin-top:-90px;
+            }
+            ul li {
+                float:left;
+                width: 33%;
+                // margin: 0 0 -300px;
             }
         }
     }
 
     // Products Further Information
     .products-description {
+        text-align: center;
         background: #E6EBED;
         color: #158DB2;
-        padding:210px 0 0;
+        padding:0 0 1em;
+
+        h2 {
+            font-size:32px;
+            font-weight: 300;
+            border-bottom: 1px solid #158DB2;
+        }
+
     }
 
     .videos {
@@ -152,16 +233,17 @@
 
         ul {
             list-style: none;
+            margin:0;
         }
-        ul li {
-            float:left;
-            width: -webkit-calc(25% - (#{$spacing-unit} / 2));
-            width:         calc(25% - (#{$spacing-unit} / 2));
+
+        li {
+            margin-top:$spacing-unit;
         }
 
         a {
             position: relative;
             color:#fff;
+            font-size:18px;
         }
         span {
             display: block;
@@ -175,9 +257,23 @@
         }
         span.title {
             padding:8px;
-            margin:0 1em;
-            border:3px solid #fff;
+            margin:0 auto;
+            border:2px solid #fff;
+            max-width:60%;
         }
+
+        @include media-query-on-laptop {
+            ul li {
+                float:left;
+                width:20%;
+                margin-top:0;
+            }
+            span.title {
+                margin:0 2px;
+                max-width: 100%;
+            }
+        }
+        
     }
 
 

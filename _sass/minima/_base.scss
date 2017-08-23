@@ -163,6 +163,7 @@ pre {
  * Wrapper
  */
 .wrapper {
+  margin:0 auto;
   padding-right: $spacing-unit / 2;
   padding-left: $spacing-unit /2;
   @extend %clearfix;

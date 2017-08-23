@@ -10,11 +10,17 @@
  */
 
 .site-header {
-  min-height: 96px;
-  padding: 10px 0;
+  
+  padding: $spacing-unit 0;
+  
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  @include media-query-on-laptop() {
+    min-height: 96px;
+    padding: 40px 0 $spacing-unit/2;
+  }
 }
 
 .site-title {
@@ -50,7 +56,7 @@
 .site-nav {
 
   float:right;
-  margin-top:66px;
+  margin-top:73px;
   font-size:20px;
 
   .nav-trigger {
@@ -224,26 +230,34 @@
 
 .footer-heading {
   font-size:17px;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: 0;
   text-align: center;
+
+  a {
+    color: #fff;
+  }
+
+  @include media-query-on-laptop() {
+    font-size:32px;
+  }
 }
 
 .footer-contacts {
-  font-size:13px;
+  font-size:14px;
   list-style:none;
   margin:0;
   padding:0;
   text-align: center;
   padding-bottom:30px;
-}
 
-@include media-query-on-laptop() {
-  .footer-contacts li {
-    display: inline;
+  li {
+    color: #8FBAD1;
   }
-  .footer-contacts li:not(:last-child):after {
-    content: " | ";
+
+  @include media-query-on-laptop() {
+    font-size:22px;
   }
+
 }
 
 
@@ -256,13 +270,14 @@
   
 
   h6 {
-    display: inline;
+    font-weight: 300;
     font-size:16px;
   }
   
   ul {
     list-style: none;
     margin:0;
+    font-size:12px;
     
   }
   ul li {
@@ -274,8 +289,19 @@
   }
 
   a {
-    font-size:12px;
     text-transform: uppercase;
+  }
+
+  @include media-query-on-laptop() {
+    h6 {
+      display: inline;
+      font-size:32px;
+    }
+    ul {
+      padding-left:1em;
+      display: inline;
+      font-size:18px;
+    }
   }
 }
 
@@ -390,7 +416,7 @@
 
 .legal {
   margin:1em 1em 2em;
-  font-size:8px;
+  font-size:10px;
   text-align: center;
   color: #0E8DB1;
   a {
