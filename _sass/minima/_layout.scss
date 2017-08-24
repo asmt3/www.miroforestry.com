@@ -364,8 +364,10 @@
  */
 .post-header {
 
-  .image-wrapper {
-    text-align: center;
+  .header-image {
+    background: center center fixed no-repeat;
+    background-size: cover;
+    height:400px;
   }
 }
 
@@ -416,6 +418,18 @@
     color:#6E7A7F;
     margin-bottom:0.3em;
   }
+}
+
+table {
+  width:100%;
+  th {
+    vertical-align: top;
+    text-align: left;
+  }
+}
+
+.image-container {
+  margin-bottom:1em;
 }
 
 .image-full-width {
@@ -478,6 +492,7 @@
     padding-top: 25px;
     height: 0;
     border:1px solid #7B888F;
+    margin-bottom:1em;
 }
 .videowrapper iframe {
     position: absolute;
@@ -518,6 +533,93 @@ dl.board-of-directors {
   }
 }
 
+// Plantations
+.two-maps {
+  @extend %clearfix;
+  margin-top:1em;
+  .container {
+    background:#fff;
+    border:1px solid #6E7A7F;
+    padding:10px;
+  }
+  .map {
+    margin-bottom: 1em;
+  }
+  @include media-query-on-laptop() {
+
+    .container:nth-child(1) {
+      margin-right:10px;
+    }
+
+    .map {
+      float:left;
+      width:50%;
+    }
+  }
+}
+
+
+
+
+
+
+
+// Country facts
+.two-cols {
+  @extend %clearfix;
+  margin-top:1em;
+}
+
+
+@include media-query-on-laptop() {
+  .two-cols {
+    > div {
+      float:left;
+      width:50%;
+    }
+  }
+}
+
+
+.country-map {
+  margin-bottom:1em;
+  
+  .container {
+    background:#fff;
+    border: 1px solid #6E7A7F;
+    padding:10px;
+
+    @include media-query-on-laptop() {  
+      margin-right:20px;
+    }
+  }
+  img {
+    max-width:100%;
+  }
+}
+
+
+
+.country-facts {
+  font-size:0.9em;
+  h2 {
+    margin:0;
+  }
+  th {
+    font-weight: 300;
+  }
+  td {
+    text-align: right;
+  }
+
+  .sub-row {
+    th {
+      padding-left: 2em; 
+    }
+  }
+  
+}
+
 // Products
 .product-specs {
 
@@ -531,7 +633,6 @@ dl.board-of-directors {
 
   th {
     border-bottom:2px solid #fff;
-    vertical-align: top;
   }
 
   td {
@@ -541,6 +642,25 @@ dl.board-of-directors {
   tr:last-child {
     td, th {
       border:0;
+    }
+  }
+}
+
+.charcoal-types {
+  @extend %clearfix;
+
+  
+
+  p {
+    padding-left:100px;
+    min-height: 140px;
+    background: top left no-repeat url('http://via.placeholder.com/80x140');
+  }
+
+  @include media-query-on-laptop() {
+    > div {
+      width:50%;
+      float:left;
     }
   }
 }

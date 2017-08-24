@@ -5,11 +5,8 @@ layout: default
 
   <header class="post-header">
     
-    {% if page.header_image %}
-    <div class="image-wrapper">
-      <img src="{{ page.header_image }}" alt="{{ page.title | escape }}">
+    <div class="header-image">
     </div>
-    {% endif %}
 
     <div class="post-title-outer green-gradient">
       <div class="wrapper">
@@ -26,3 +23,20 @@ layout: default
   </div>
 
 </article>
+
+
+
+
+{% if page.header_image %}
+<style>
+.post-header .header-image {
+    background-image:url("{{ page.header_image }}")
+  }
+</style>
+{% else %}
+<style>
+.post-header .header-image {
+    background-image:url("http://via.placeholder.com/1400x400")
+  }
+</style>
+{% endif %}
