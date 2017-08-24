@@ -362,7 +362,6 @@
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
 
   .image-wrapper {
     text-align: center;
@@ -386,30 +385,34 @@
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
+  padding: $spacing-unit 0;
+  background:#e1e7e7;
+
+  p {
+    font-size:24px;
+    margin:0 0 1.3em;
+  }
+  p.primary {
+    color: #398A41;
+    font-weight: 400;
+  }
 
   h2 {
-    @include relative-font-size(2);
-
-    @include media-query-on-laptop() {
-      @include relative-font-size(1.75);
-    }
+    @include relative-font-size(1.1);
+    color:#6E7A7F;
+    margin-bottom:0.3em;
   }
 
   h3 {
-    @include relative-font-size(1.625);
-
-    @include media-query-on-laptop() {
-      @include relative-font-size(1.375);
-    }
+    @include relative-font-size(1.05);
+    color:#6E7A7F;
+    margin-bottom:0.3em;
   }
 
   h4 {
-    @include relative-font-size(1.25);
-
-    @include media-query-on-laptop() {
-      @include relative-font-size(1.125);
-    }
+    @include relative-font-size(1);
+    color:#6E7A7F;
+    margin-bottom:0.3em;
   }
 }
 
@@ -425,4 +428,99 @@
       color: #0E8DB1;
     }
   }
+}
+
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    border:1px solid #7B888F;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+
+dl.board-of-directors {
+  dt {
+    font-size:1.1em;
+    
+    span.name {
+      font-weight: 400;
+      color: #408140;
+    }
+
+  }
+
+  dd {
+   margin-bottom: 1em;
+  }
+
+}
+
+.annual-reports {
+  list-style: none;
+  margin:0;
+
+  span {
+    color: #408140;
+  }
+
+  a {
+    font-weight: 400;
+    color: $text-color;
+  }
+}
+
+// Contacts
+
+.contact-cols {
+  @extend %clearfix;
+
+  border-bottom: 1px solid #0E8DB1;
+  margin: 2em 0 1em;
+
+  .col {
+    .inner {
+      position: relative;
+      border-right: 1px solid #0E8DB1;
+      padding:0 15px;
+      margin:0 15px;
+      min-height: 410px;
+    }
+
+    h2 {
+      width:70%;
+      color:#398A41;
+      font-weight: 400;
+      min-height: 2em;
+    }
+    img {
+      position: absolute;
+      right: 25px;
+      top:0;
+    }
+  }
+
+  .col:last-child .inner {
+    border:0;
+  }
+  
+
+  @include media-query-on-laptop() {
+    .col {
+      float:left;
+      width: 33%;
+    }
+  }
+  
+
+
 }
