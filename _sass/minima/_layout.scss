@@ -136,6 +136,7 @@
 
   @include media-query-on-palm() {
     position: absolute;
+    z-index: 999;
     top: 29px;
     margin-top:0;
     right: $spacing-unit / 2;
@@ -403,6 +404,7 @@
     margin-bottom:0.3em;
   }
 
+
   h3 {
     @include relative-font-size(1.05);
     color:#6E7A7F;
@@ -414,6 +416,43 @@
     color:#6E7A7F;
     margin-bottom:0.3em;
   }
+}
+
+.image-full-width {
+  border:1px solid #7B888F;
+  padding:10px;
+  margin-bottom:1em;
+  img {
+    max-width: 100%;
+  }
+}
+
+.images-half-width {
+  @extend %clearfix;
+  div {
+    border:1px solid #7B888F;
+    padding:10px;
+    margin-bottom:1em;
+    img {
+      max-width: 100%;
+    }
+  }
+  
+
+
+  @include media-query-on-laptop() {
+    div {
+      float:left;
+      width:calc(50% - 32px);
+      margin-right: 20px;
+    }
+
+    div:nth-child(2) {
+      margin:0;
+    }
+  }
+
+
 }
 
 
@@ -479,6 +518,68 @@ dl.board-of-directors {
   }
 }
 
+// Products
+.product-specs {
+
+  border:2px solid #fff;
+  padding:0 15px;
+  margin-bottom: 1em;
+
+  table {
+    width:100%;
+  }
+
+  th {
+    border-bottom:2px solid #fff;
+    vertical-align: top;
+  }
+
+  td {
+    border-bottom:2px solid #fff;
+  }
+
+  tr:last-child {
+    td, th {
+      border:0;
+    }
+  }
+}
+
+// Careers
+
+.vacancies {
+
+  h2 {
+    color: #398A41;
+  }
+
+  a {
+    color: $text-color;
+  }
+  
+  table {
+    width:100%;
+    margin-bottom:2em;
+
+    th {
+      text-align: left;
+
+      a {
+        color: #408140;
+      }
+    }
+
+    td {
+      padding:0 1em;
+    }
+    
+  }
+
+  dt {
+    font-weight: 400;
+  }
+}
+
 // Contacts
 
 .contact-cols {
@@ -490,10 +591,6 @@ dl.board-of-directors {
   .col {
     .inner {
       position: relative;
-      border-right: 1px solid #0E8DB1;
-      padding:0 15px;
-      margin:0 15px;
-      min-height: 410px;
     }
 
     h2 {
@@ -518,6 +615,13 @@ dl.board-of-directors {
     .col {
       float:left;
       width: 33%;
+
+      .inner {
+        border-right: 1px solid #0E8DB1;
+        padding:0 15px;
+        margin:0 15px;
+        min-height: 410px;
+      }
     }
   }
   
