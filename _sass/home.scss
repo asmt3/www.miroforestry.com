@@ -18,11 +18,12 @@
         padding:1em;
         color:#fff;
         font-weight: 300;
-        font-size:18px;
+        font-size:20px;
         text-align:center;
         line-height: 1.2;
         margin:0;
     }
+    
 
     @include media-query-on-laptop() {
         h1 {
@@ -30,12 +31,25 @@
         }
     }
 
+    // Slideshow
+    #home-slideshow-desktop {
+        display: none;
+    }
+    @include media-query-on-laptop() {
+        #home-slideshow-mobile {display: none;}
+        #home-slideshow-desktop {display: block;}
+    }
+
+    
+
     // Company Stats
     .company-stats {
         background: #E6EBED;
         color: #158DB2;
         text-align: center;
         padding:54px 0;
+        font-size:18px;
+        line-height: 1.2;
 
         .col {
             margin-top:20px;
@@ -49,6 +63,7 @@
         img {
             margin-bottom: -8px;
         }
+        img.desktop {display: none;}
 
         p {
             border:3px solid #fff;
@@ -56,7 +71,10 @@
             padding: 0.5em;
         }
 
+
         @include media-query-on-laptop() {
+
+            font-size:22px;
 
             .cols {
                 // max-width: 1200px;
@@ -73,7 +91,7 @@
                 width: -webkit-calc(5% - (#{$spacing-unit} / 2));
                 width:         calc(5% - (#{$spacing-unit} / 2));
                 background: no-repeat bottom center url("../assets/images/home/right-arrow.png");
-                height: 205px;
+                height: 200px;
             }
             .col-growth {
                 width: -webkit-calc(27.5% - (#{$spacing-unit} / 2));
@@ -89,6 +107,9 @@
                 margin:0 1em;
                 padding: 0.5em;
             }
+
+            img.mobile {display: none;}
+            img.desktop {display: inline;}
         }
 
     }

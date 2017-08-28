@@ -2,12 +2,12 @@
 
 // Define defaults for each variable.
 
-$base-font-family: "Rokkitt", serif !default;
-$base-font-size:   26px !default;
+$base-font-family: 'Roboto Slab', serif !default;
+$base-font-size:   18px !default;
 $base-font-weight: 300 !default;
-$heading-font-weight: 400 !default;
+$heading-font-weight: 300 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+$base-line-height: 1.4 !default;
 
 $spacing-unit:     30px !default;
 
@@ -50,5 +50,6 @@ $linear-gradient-to: #398A41;
   "minima/base",
   "minima/layout",
   "minima/syntax-highlighting",
-  "home"
+  "home",
+  "../assets/slideshow-slippry/slippry.scss"
 ;

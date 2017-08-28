@@ -55,6 +55,8 @@
 
 .site-nav {
 
+  position: relative;
+  z-index: 999;
   float:right;
   margin-top:73px;
   font-size:20px;
@@ -185,7 +187,7 @@
 
     ul ul {
       position: static;
-      display: block;
+      display: none;
       background:url("../assets/images/header/arrow.png") no-repeat right $spacing-unit top;
       width:auto;
     }
@@ -376,14 +378,15 @@
 }
 
 .post-title {
-  font-size:1.2em;
+  @include relative-font-size(1.25);
+  font-weight: 300;
   letter-spacing: -1px;
   line-height: 1;
   color:#fff;
 
 
   @include media-query-on-laptop() {
-    @include relative-font-size(2.25);
+    @include relative-font-size(1.75);
   }
 }
 
@@ -392,7 +395,6 @@
   background:#e1e7e7;
 
   p {
-    font-size:24px;
     margin:0 0 1.3em;
   }
   p.primary {

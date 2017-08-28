@@ -6,6 +6,45 @@ layout: default
 
   <!-- Slideshow -->
 
+  <div id="home-slideshow-desktop">
+    <ul>
+      <!-- Desktop -->
+      <li>
+        <a href="#"><img src="./assets/images/home/slides/1.png" alt=""></a>
+      </li>
+      <li>
+        <a href="#"><img src="./assets/images/home/slides/2.png"  alt=""></a>
+      </li>
+      <li>
+        <a href="#"><img src="./assets/images/home/slides/3-mobile.png" alt=""></a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="home-slideshow-mobile">
+    <ul>
+      <!-- Mobile -->
+      <li>
+        <a href="#"><img src="./assets/images/home/slides/1-mobile.png" alt=""></a>
+      </li>
+      <li>
+        <a href="#"><img src="./assets/images/home/slides/2-mobile.png"  alt=""></a>
+      </li>
+      <li>
+        <a href="#"><img src="./assets/images/home/slides/3-mobile.png" alt=""></a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    jQuery(document).ready(function(){
+      jQuery('#home-slideshow-desktop ul, #home-slideshow-mobile ul').slippry({
+        pager:false,
+        captions: false
+      })
+    });
+  </script>
+
   <!-- End Slideshow -->
 
   <!-- Description -->
@@ -23,7 +62,8 @@ layout: default
   <div class="company-stats">
     <div class="wrapper">
       <div class="col col-current-stock">
-        <img src="./assets/images/home/current-stock.png" alt="Current Stock">
+        <img src="./assets/images/home/current-stock.png" alt="Current Stock" class="mobile">
+        <img src="./assets/images/home/current-stock-dt.png" alt="Current Stock" class="desktop">
         <p>
           Miro Forestry
           has 10,000 hecatres of standing
@@ -35,7 +75,8 @@ layout: default
       <div class="col col-arrow"></div>
 
       <div class="col col-growth">
-        <img src="./assets/images/home/growth.png" alt="Growth">
+        <img src="./assets/images/home/growth.png" alt="Growth" class="mobile">
+        <img src="./assets/images/home/growth-dt.png" alt="Growth" class="desktop">
         <p>
           Expanding this
           plantation
@@ -47,7 +88,8 @@ layout: default
       <div class="col col-arrow"></div>
 
       <div class="col col-product">
-        <img src="./assets/images/home/timber2.png" alt="Timber products">
+        <img src="./assets/images/home/timber2.png" alt="Timber products" class="mobile">
+        <img src="./assets/images/home/timber2-dt.png" alt="Timber products" class="desktop">
         <p>
           Producing sustainable 
           timber products including 
@@ -89,7 +131,7 @@ layout: default
           <i class="overlap"></i>
           <div class="product">
             <h3>
-              <a href="/products/overview">
+              <a href="./products/timber">
                 Structural Sawn Timber
               </a>
             </h3>
@@ -108,7 +150,7 @@ layout: default
           <i class="overlap"></i>
           <div class="product">
             <h3>
-              <a href="/products/overview">
+              <a href="./products/poles">
                 Poles
               </a>
             </h3>
@@ -125,7 +167,7 @@ layout: default
           <i class="overlap"></i>
           <div class="product">
             <h3>
-              <a href="/products/overview">
+              <a href="./products/biomass">
                 Biomass Energy
               </a>
             </h3>
