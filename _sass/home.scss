@@ -4,13 +4,17 @@
     // background-image: url("../assets/images/large-parallax-bg.jpeg");
 
     /* Set a specific height */
-    height: 500px; 
+    height: 400px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include media-query-on-laptop() {
+        height: 500px; 
+    }
 }
 
 .parallax-1 {
@@ -127,7 +131,7 @@
     .fsc-statement {
 
         p {
-            width:50%;
+            width:70%;
             color:#fff;
             padding-top: 100px;
             font-size:16px;
@@ -156,7 +160,7 @@
         ul {
             position: relative;
             z-index:10;
-            margin-top:-40px;
+            margin:-40px 0 0;
             list-style: none;
         }
         ul li {
