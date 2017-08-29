@@ -1,7 +1,7 @@
 
 .parallax { 
     /* The image used */
-    background-image: url("../assets/images/large-parallax-bg.jpeg");
+    // background-image: url("../assets/images/large-parallax-bg.jpeg");
 
     /* Set a specific height */
     height: 500px; 
@@ -11,6 +11,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.parallax-1 {
+    background-image: url("../assets/images/home/parallax-1.png");
+}
+.parallax-2 {
+    background-image: url("../assets/images/home/parallax-2.png");
 }
 
 .home {
@@ -34,6 +41,8 @@
     // Slideshow
     #home-slideshow-desktop {
         display: none;
+        max-width: 1600px;
+        margin:0 auto;
     }
     @include media-query-on-laptop() {
         #home-slideshow-mobile {display: none;}
@@ -240,8 +249,8 @@
         padding:0 0 1em;
 
         h2 {
-            font-size:32px;
-            font-weight: 300;
+            font-size:1em;
+            font-weight: 400;
             border-bottom: 1px solid #158DB2;
         }
 
@@ -252,6 +261,11 @@
         text-align: center;
         padding: 1em 0;
         color:#fff;
+
+        p {
+            font-size:1.5em;
+            padding: 1em 0;
+        }
 
         ul {
             list-style: none;

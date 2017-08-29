@@ -58,8 +58,8 @@
   position: relative;
   z-index: 999;
   float:right;
-  margin-top:73px;
-  font-size:20px;
+  margin-top:72px;
+  font-size:18px;
 
   .nav-trigger {
       display: none;
@@ -241,7 +241,7 @@
   }
 
   @include media-query-on-laptop() {
-    font-size:32px;
+    font-size:26px;
   }
 }
 
@@ -298,7 +298,7 @@
   @include media-query-on-laptop() {
     h6 {
       display: inline;
-      font-size:32px;
+      font-size:26px;
     }
     ul {
       padding-left:1em;
@@ -369,7 +369,7 @@
   .header-image {
     background: center center fixed no-repeat;
     background-size: cover;
-    height:400px;
+    text-align: center;
   }
 }
 
@@ -404,6 +404,7 @@
 
   h2 {
     @include relative-font-size(1.1);
+    font-weight:400;
     color:#6E7A7F;
     margin-bottom:0.3em;
   }
@@ -411,6 +412,7 @@
 
   h3 {
     @include relative-font-size(1.05);
+    font-weight:400;
     color:#6E7A7F;
     margin-bottom:0.3em;
   }
@@ -434,6 +436,15 @@ table {
   margin-bottom:1em;
 }
 
+.image-centered-adaptive-width {
+  text-align: center;
+  margin-bottom:1em;
+  img {
+    border:1px solid #7B888F;
+    padding:10px;
+    max-width: calc(100% - 20px);
+  }
+}
 .image-full-width {
   border:1px solid #7B888F;
   padding:10px;
@@ -716,10 +727,10 @@ dl.board-of-directors {
     }
 
     h2 {
-      width:70%;
+      width:60%;
       color:#398A41;
       font-weight: 400;
-      min-height: 2em;
+      min-height: 2.5em;
     }
     img {
       position: absolute;
