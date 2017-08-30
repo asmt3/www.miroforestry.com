@@ -24,6 +24,7 @@ $content-width:    1200px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
+$on-large-screen:  1400px !default;
 
 $linear-gradient-from: #78A536;
 $linear-gradient-to: #398A41;
@@ -37,6 +38,12 @@ $linear-gradient-to: #398A41;
 
 @mixin media-query-on-laptop() {
   @media screen and (min-width: $on-laptop) {
+    @content;
+  }
+}
+
+@mixin media-query-on-large-screen() {
+  @media screen and (min-width: $on-large-screen) {
     @content;
   }
 }
