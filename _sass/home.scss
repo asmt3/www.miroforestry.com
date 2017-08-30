@@ -45,12 +45,22 @@
     // Slideshow
     #home-slideshow-desktop {
         display: none;
-        max-width: 1200px;
+        max-width: 1400px;
         margin:0 auto;
     }
     @include media-query-on-laptop() {
         #home-slideshow-mobile {display: none;}
         #home-slideshow-desktop {display: block;}
+    }
+
+    @include media-query-on-large-screen() {
+        #home-slideshow-desktop {
+            max-width: 100%;
+
+            img {
+                margin:-10% 0;
+            }
+        }
     }
 
     
