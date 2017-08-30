@@ -45,7 +45,7 @@
     // Slideshow
     #home-slideshow-desktop {
         display: none;
-        max-width: 1600px;
+        max-width: 1200px;
         margin:0 auto;
     }
     @include media-query-on-laptop() {
