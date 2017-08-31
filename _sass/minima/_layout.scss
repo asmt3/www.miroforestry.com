@@ -97,7 +97,6 @@
     &:hover {
       color:#90BED3;
     }
-
     
   }
 
@@ -119,9 +118,9 @@
     display: none;
     left: 0;
     top: 100%;
-    width:300px;
-    background:url("../assets/images/header/arrow.png") no-repeat 20px 0px;
-    padding-top:5px;
+    width: 300px;
+    background: url("../assets/images/header/arrow.png") no-repeat 20px 0px;
+    padding-top: 5px;
   }
   ul ul li {
     background:#0E8DB1;
@@ -138,7 +137,7 @@
     top: 29px;
     margin-top:0;
     right: 2%;
-    width:96%;
+    width: 96%;
     text-align: left;
 
     .trigger>ul>li:not(:last-child):after {
@@ -179,7 +178,7 @@
     }
 
     ul {
-      background-color: #694686;
+      background-color: #0E8DB1;
       padding:1em 0;
     }
 
@@ -193,7 +192,7 @@
     }
 
     ul ul li {
-      background-color: #694686;
+      background-color: #0E8DB1;
       margin:0;
     }
 
@@ -206,8 +205,8 @@
     ul li a {
       display: block;
       padding: 8px 16px;
-      color:#dad3e1;
-      border-bottom: 1px solid #716F72;
+      color:#90BED3;
+      border-bottom: 1px solid #90BED3;
       &:hover {
         color:#F2E42E;
       }
