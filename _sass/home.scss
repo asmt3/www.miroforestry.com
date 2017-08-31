@@ -218,7 +218,7 @@
             border:3px solid #fff;
             padding:14px 8px;
             margin:-3px 4px 1em;
-            min-height: 145px;
+            min-height: 135px;
         }
 
         .product h3 {
@@ -263,9 +263,11 @@
         padding:0 0 1em;
 
         h2 {
-            font-size:1em;
+            font-size:1.2em;
             font-weight: 400;
             border-bottom: 1px solid #158DB2;
+            padding-top:1em;
+            margin-bottom: 1em;
         }
 
     }
@@ -273,7 +275,7 @@
     .videos {
         background:#6B7E88;
         text-align: center;
-        padding: 1em 0;
+        padding: 1em 0 3em;
         color:#fff;
 
         p {

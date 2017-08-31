@@ -10,7 +10,6 @@ $(function(){
       allSubmenus.hide();
       thisSubmenu.show();
       e.preventDefault();
-      console.log('prevent')
     }
     // else: 
     // do not intefere
