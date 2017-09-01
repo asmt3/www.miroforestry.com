@@ -591,13 +591,19 @@ dl.board-of-directors {
   }
   @include media-query-on-laptop() {
 
-    .container:nth-child(1) {
+    .map:nth-child(1) .container {
+      width:615px;
       margin-right:10px;
+    }
+    .map:nth-child(2) .container {
+      width:358px;
     }
 
     .map {
       float:left;
-      width:50%;
+    }
+    .map:nth-child(2) {
+      float:right;
     }
   }
 }
