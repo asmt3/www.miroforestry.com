@@ -588,7 +588,11 @@ dl.board-of-directors {
   }
   .map {
     margin-bottom: 1em;
+    img {
+      width:100%;
+    }
   }
+
   @include media-query-on-laptop() {
 
     .map:nth-child(1) .container {
