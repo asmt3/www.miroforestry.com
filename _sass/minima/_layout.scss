@@ -440,6 +440,10 @@
     margin-bottom:0.3em;
   }
 
+  h2.italicised {
+    font-style: italic;
+  }
+
 
   h3 {
     @include relative-font-size(1.05);
@@ -450,6 +454,7 @@
 
   h4 {
     @include relative-font-size(1);
+    font-weight:400;
     color:#6E7A7F;
     margin-bottom:0.3em;
   }
@@ -755,6 +760,11 @@ dl.board-of-directors {
 
 // Contacts
 
+.reputation p {
+  font-size:0.9em;
+  font-style: italic;
+}
+
 .contact-cols {
   @extend %clearfix;
 
@@ -782,6 +792,7 @@ dl.board-of-directors {
   .col:last-child .inner {
     border:0;
   }
+
   
 
   @include media-query-on-laptop() {

@@ -4,7 +4,7 @@
     // background-image: url("../assets/images/large-parallax-bg.jpeg");
 
     /* Set a specific height */
-    height: 400px; 
+    height: 300px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -13,7 +13,7 @@
     background-size: cover;
 
     @include media-query-on-laptop() {
-        height: 500px; 
+        height: 400px; 
     }
 }
 
@@ -45,7 +45,6 @@
     // Slideshow
     #home-slideshow-desktop {
         display: none;
-        max-width: 1400px;
         margin:0 auto;
     }
     @include media-query-on-laptop() {
@@ -54,13 +53,13 @@
     }
 
     @include media-query-on-large-screen() {
-        #home-slideshow-desktop {
-            max-width: 100%;
+        // #home-slideshow-desktop {
+        //     max-width: 100%;
 
-            img {
-                margin:-10% 0;
-            }
-        }
+        //     img {
+        //         margin:-10% 0;
+        //     }
+        // }
     }
 
     
