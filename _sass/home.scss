@@ -1,10 +1,9 @@
 
 .parallax { 
     /* The image used */
-    // background-image: url("../assets/images/large-parallax-bg.jpeg");
 
     /* Set a specific height */
-    height: 300px; 
+    height: 400px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -12,16 +11,19 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include media-query-on-laptop() {
-        height: 400px; 
-    }
+    // @include media-query-on-laptop() {
+    //     height: 400px; 
+    // }
 }
 
 .parallax-1 {
     background-image: url("../assets/images/home/parallax-1.png");
+    
 }
 .parallax-2 {
     background-image: url("../assets/images/home/parallax-2.png");
+    
+    height:400px;
 }
 
 .home {
@@ -45,21 +47,22 @@
     // Slideshow
     #home-slideshow-desktop {
         display: none;
+        // max-width: 1200px;
         margin:0 auto;
     }
-    @include media-query-on-laptop() {
+    // @include media-query-on-laptop() {
         #home-slideshow-mobile {display: none;}
         #home-slideshow-desktop {display: block;}
-    }
+    // }
 
     @include media-query-on-large-screen() {
-        // #home-slideshow-desktop {
-        //     max-width: 100%;
+        #home-slideshow-desktop {
+            // max-width: 100%;
 
-        //     img {
-        //         margin:-10% 0;
-        //     }
-        // }
+            // img {
+            //     margin:-10% 0;
+            // }
+        }
     }
 
     
