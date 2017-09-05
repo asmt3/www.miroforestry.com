@@ -7,24 +7,25 @@
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center center;
+    background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url("../assets/images/home/parallax-1.png");
 
     // @include media-query-on-laptop() {
     //     height: 400px; 
     // }
 }
 
-.parallax-1 {
-    background-image: url("../assets/images/home/parallax-1.png");
+// .parallax-1 {
+//     background-image: url("../assets/images/home/parallax-1.png");
     
-}
-.parallax-2 {
-    background-image: url("../assets/images/home/parallax-2.png");
+// }
+// .parallax-2 {
+//     background-image: url("../assets/images/home/parallax-2.png");
     
-    height:400px;
-}
+//     height:400px;
+// }
 
 .home {
     h1 {
@@ -331,4 +332,8 @@
     }
 
 
+}
+
+.home-footer-photo {
+    
 }
