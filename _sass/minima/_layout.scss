@@ -814,3 +814,34 @@ dl.board-of-directors {
 
 
 }
+
+
+.gallery {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .img {
+    width:calc(33.333% - 10px);
+    margin-bottom:10px;
+    height:100px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    img {
+      opacity: 0;
+      height:100%;
+      width:100%;
+    }
+  }
+
+  @include media-query-on-laptop() {
+    .img {
+      width:calc(25% - 10px);
+      height:250px;
+    }
+  }
+
+}
+

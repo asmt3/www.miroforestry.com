@@ -1,0 +1,43 @@
+---
+layout: page
+title: Gallery
+header_image: ./assets/images/careers/headers/careers.png
+---
+
+
+
+<div class="gallery">
+	
+
+	{% for i in (1..32) %}
+		
+	<a href="./assets/images/gallery/{{ i }}.png" class="img">
+		<img src="./assets/images/gallery/thumbs/{{ i }}.png" alt="Gallery Image {{ i }}">
+	</a>
+	{% endfor %}
+
+
+</div>
+
+
+
+
+<script>
+
+
+	// make bakground cover effect
+	$(".gallery img").each(function(){
+		var div = $(this).parent();
+		var src = $(this).attr('src');
+		div.css('background-image', 'url("' + src + '")');
+	})
+
+	// init slideshow
+	$('.gallery a').magnificPopup({
+		type: 'image',
+		gallery:{
+			enabled:true,
+			preload: [0,2]
+		}
+	});
+</script>
