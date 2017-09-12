@@ -205,13 +205,13 @@
     ul li a {
       display: block;
       padding: 8px 16px;
-      color:#90BED3;
+      color:#fff;
       border-bottom: 1px solid #90BED3;
       &:hover {
-        color:#90BED3;
+        color:#fff;
       }
       &:visited {
-        color:#90BED3;
+        color:#fff;
       }
     }
     
@@ -223,7 +223,7 @@
       padding-left:2em;
     }
     ul ul li a:visited {
-      color:#dad3e1;
+      color:#fff;
     }
     a:after {
       content: "" !important;
