@@ -51,10 +51,10 @@
         // max-width: 1200px;
         margin:0 auto;
     }
-    // @include media-query-on-laptop() {
+    @include media-query-on-laptop() {
         #home-slideshow-mobile {display: none;}
         #home-slideshow-desktop {display: block;}
-    // }
+    }
 
     @include media-query-on-large-screen() {
         #home-slideshow-desktop {
