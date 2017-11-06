@@ -345,7 +345,13 @@
 
   li {
     display: inline;
-    padding:$spacing-unit / 2;
+    padding:$spacing-unit / 3;
+  }
+  li img {
+    background:#fff;
+    padding:5px;
+    border-radius: 2px;
+    margin-bottom:10px;
   }
 }
 
