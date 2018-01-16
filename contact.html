@@ -89,11 +89,70 @@ header_image: ./assets/images/contact/headers/contact.png
 
 </div>
 
+<div class="contact-form">
+  <form id="contact-form">
+    <table>
+      <tr>
+        <th>
+          Your Name
+        </th>
+        <td>
+          <input type="text" name="name" id="contact-name" required placeholder="Please enter your full name">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Email Address
+        </th>
+        <td>
+          <input type="email" name="email" id="contact-email" placeholder="Please enter your email address">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Subject
+        </th>
+        <td>
+          <select id="contact-subject">
+            <option value="careers">Careers</option>
+            <option value="complaint">Complaint/Grievance</option>
+            <option value="sales">Sales Enquiry</option>
+            <option value="other">Other</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Comments
+        </th>
+        <td>
+          <textarea name="comments" id="contact-comments" rows="10" required></textarea>
+        </td>
+      </tr>
+    </table>
+    <img id="contact-spinner" src="/assets/images/contact/ajax-loader.gif" />
+    <input id="contact-submit" type="submit" value="Send Message">
+  </form>
+</div>
+
 <div class="reputation">
   <p>
-    Our reputation is upheld by how we put into practice our core values of honesty, integrity and respect for people and the environment. If you have a grievance or complaint of any nature please email <a href="mailto:comments@miroforestry.com">comments@miroforestry.com</a>. 
+    Our reputation is upheld by how we put into practice our core values of honesty, integrity and respect for people and the environment. If you have a grievance or complaint of any nature please email <a href="mailto:comments@miroforestry.com">comments@miroforestry.com</a> or use the form above selecting 'complaint or grievance' as the subject. All reported concerns are treated with the strictest confidence. We aim to respond to grievances within 30 days, if you make a query anonymously and wish to receive feedback please include a way in which we can contact you.
   </p>
   <p>
     This allows employees and stakeholders to raise concerns and report instances of potential non-compliance with our values and principles in strictest confidence or anonymously.
   </p>
 </div>
+
+
+<!-- 
+
+TODO: 
+validation
+form handler
+new-site rename
+mobile
+remove table?
+
+
+ -->
