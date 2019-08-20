@@ -149,6 +149,10 @@
             padding-top: 100px;
             font-size:16px;
             text-align: center;
+
+            small {
+                font-size:0.65em;
+            }
         }
 
         @include media-query-on-laptop() {
