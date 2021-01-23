@@ -799,7 +799,7 @@ dl.board-of-directors {
   @extend %clearfix;
 
   border-bottom: 1px solid #0E8DB1;
-  margin: 2em 0 1em;
+  margin: 2em 0 0;
 
   .col {
     .inner {
@@ -825,6 +825,8 @@ dl.board-of-directors {
 
   
 
+  
+
   @include media-query-on-laptop() {
     .col {
       float:left;
@@ -841,6 +843,27 @@ dl.board-of-directors {
   
 
 
+}
+
+.contact-sales {
+  padding: 1em 0 0;
+  background: #0E8DB1;
+  font-size:17px;
+  margin-bottom: 0;
+  text-align: center;
+  
+
+  h5 {
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  @include media-query-on-laptop() {
+    font-size:26px;
+  }
 }
 
 
