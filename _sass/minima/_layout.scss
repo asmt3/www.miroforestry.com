@@ -774,8 +774,12 @@ dl.board-of-directors {
   margin: 1em 0 1em;
   padding:0 0 1em;
 
+  td {
+    display: flex;
+  };
+
   input[type="text"],input[type="email"], textarea {
-    width:100%;
+    flex:1;
     padding:8px;
     font-size:1em;
     border:0;
@@ -798,8 +802,7 @@ dl.board-of-directors {
 .contact-cols {
   @extend %clearfix;
 
-  border-bottom: 1px solid #0E8DB1;
-  margin: 2em 0 0;
+  margin: 2em 0 1em;
 
   .col {
     .inner {
